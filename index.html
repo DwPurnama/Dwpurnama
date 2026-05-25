@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Profesional - I Dewa Made Agus Purnama</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #2c3e50, #000000);
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Sunset Background Effect */
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                        url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to bottom, transparent, #1a1a1a);
+        }
+
+        .nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 30px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .logo {
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            color: #ff9a9e;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #fad0c4;
+            margin-bottom: 10px;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: -webkit-linear-gradient(#ff9a9e, #fecfef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section {
+            padding: 80px 10%;
+            background: #1a1a1a;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #ff9a9e;
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ff9a9e;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #fad0c4;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-list li span {
+            font-weight: bold;
+            width: 120px;
+            color: #ff9a9e;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            background: #121212;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Timeline for education/work */
+        .timeline {
+            border-left: 2px solid #ff9a9e;
+            padding-left: 20px;
+            margin-left: 10px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -31px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background: #ff9a9e;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 768px) {
+            .section { padding: 60px 5%; }
+            .hero-content h1 { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="logo">DEWA.</div>
+        <div><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h2>Personal Profile</h2>
+            <h1>I DEWA MADE<br>AGUS PURNAMA</h1>
+            <p style="letter-spacing: 2px; opacity: 0.8;">ANGGOTA KEPOLISIAN RI | LIFELONG LEARNER</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Tentang Saya</h2>
+        <div style="width: 50px; height: 5px; background: #ff9a9e; margin-bottom: 40px;"></div>
+        
+        <div class="grid-container">
+            <div class="card">
+                <i class="fas fa-user-circle"></i>
+                <h3>Biodata Diri</h3>
+                <ul class="info-list">
+                    <li><span>Nama:</span> Dewa</li>
+                    <li><span>TTL:</span> Satra, 19 Agt 2005</li>
+                    <li><span>Keahlian:</span> Adaptif & Pembelajar</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-heart"></i>
+                <h3>Hobi & Minat</h3>
+                <p><strong>Akademik:</strong> Gemar Belajar hal baru.</p>
+                <p><strong>Non-Akademik:</strong> Karate & Jogging.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-briefcase"></i>
+                <h3>Karier Saat Ini</h3>
+                <p>Mengabdi di <strong>Kepolisian Republik Indonesia (Polri)</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: #121212;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Riwayat Pendidikan</h2>
+        <div style="width: 50px; height: 5px; background: #ff9a9e; margin-bottom: 40px;"></div>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <h4>S1 Teknologi Informasi</h4>
+                <p>Pendidikan Tinggi</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Diktukba Polri 2024</h4>
+                <p>Pendidikan Pembentukan Bintara Polri</p>
+            </div>
+            <div class="timeline-item">
+                <h4>SMAN 1 Semarapura</h4>
+                <p>Sekolah Menengah Atas</p>
+            </div>
+            <div class="timeline-item">
+                <h4>SMPN 1 Semarapura</h4>
+                <p>Sekolah Menengah Pertama</p>
+            </div>
+            <div class="timeline-item">
+                <h4>SDN 1 Semarapura Kangin</h4>
+                <p>Sekolah Dasar</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 I Dewa Made Agus Purnama. Dirancang dengan nuansa Senja.</p>
+    </footer>
+
+</body>
+</html>
